@@ -14,7 +14,9 @@
 		CAEAFBAB1EF53A0500141A4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAEAFBAA1EF53A0500141A4C /* Assets.xcassets */; };
 		CAEAFBAE1EF53A0500141A4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAEAFBAC1EF53A0500141A4C /* LaunchScreen.storyboard */; };
 		CAEAFBB91EF53A0500141A4C /* CityMapsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBB81EF53A0500141A4C /* CityMapsTests.m */; };
+		CAEAFBCA1EF53DE100141A4C /* CMCity.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBC91EF53DE100141A4C /* CMCity.m */; };
 		CAEAFBCE1EF5407800141A4C /* NSDictionary+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBCD1EF5407800141A4C /* NSDictionary+CMAdditions.m */; };
+		CAEAFBD11EF5432500141A4C /* CMCoordination.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBD01EF5432500141A4C /* CMCoordination.m */; };
 		CAEAFBDC1EF54EAB00141A4C /* NSJSONSerialization+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBDB1EF54EAB00141A4C /* NSJSONSerialization+CMAdditions.m */; };
 		CAEAFBE21EF563BA00141A4C /* NSArray+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBE11EF563BA00141A4C /* NSArray+CMAdditions.m */; };
 		CAEAFBEA1EF56CE200141A4C /* UITableView+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBE91EF56CE200141A4C /* UITableView+CMAdditions.m */; };
@@ -45,8 +47,12 @@
 		CAEAFBB41EF53A0500141A4C /* CityMapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityMapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAEAFBB81EF53A0500141A4C /* CityMapsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityMapsTests.m; sourceTree = "<group>"; };
 		CAEAFBBA1EF53A0500141A4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAEAFBC81EF53DE100141A4C /* CMCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCity.h; sourceTree = "<group>"; };
+		CAEAFBC91EF53DE100141A4C /* CMCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCity.m; sourceTree = "<group>"; };
 		CAEAFBCC1EF5407800141A4C /* NSDictionary+CMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CMAdditions.h"; sourceTree = "<group>"; };
 		CAEAFBCD1EF5407800141A4C /* NSDictionary+CMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CMAdditions.m"; sourceTree = "<group>"; };
+		CAEAFBCF1EF5432500141A4C /* CMCoordination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCoordination.h; sourceTree = "<group>"; };
+		CAEAFBD01EF5432500141A4C /* CMCoordination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCoordination.m; sourceTree = "<group>"; };
 		CAEAFBD31EF5440300141A4C /* CMJSONObjectInitializationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMJSONObjectInitializationProtocol.h; sourceTree = "<group>"; };
 		CAEAFBDA1EF54EAB00141A4C /* NSJSONSerialization+CMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+CMAdditions.h"; sourceTree = "<group>"; };
 		CAEAFBDB1EF54EAB00141A4C /* NSJSONSerialization+CMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+CMAdditions.m"; sourceTree = "<group>"; };
@@ -149,6 +155,10 @@
 		CAEAFBC51EF53C2200141A4C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CAEAFBC81EF53DE100141A4C /* CMCity.h */,
+				CAEAFBC91EF53DE100141A4C /* CMCity.m */,
+				CAEAFBCF1EF5432500141A4C /* CMCoordination.h */,
+				CAEAFBD01EF5432500141A4C /* CMCoordination.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -303,6 +313,8 @@
 				CAEAFBF51EF575E100141A4C /* UIView+CMAdditions.m in Sources */,
 				CAEAFBA31EF53A0500141A4C /* AppDelegate.m in Sources */,
 				CAEAFBDC1EF54EAB00141A4C /* NSJSONSerialization+CMAdditions.m in Sources */,
+				CAEAFBCA1EF53DE100141A4C /* CMCity.m in Sources */,
+				CAEAFBD11EF5432500141A4C /* CMCoordination.m in Sources */,
 				CAEAFBE21EF563BA00141A4C /* NSArray+CMAdditions.m in Sources */,
 				CAEAFBA01EF53A0500141A4C /* main.m in Sources */,
 			);
