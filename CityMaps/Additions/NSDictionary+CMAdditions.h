@@ -35,6 +35,14 @@
 - (NSNumber *)cm_numberForKey:(id)key;
 
 /**
+ Returns NSArray representation of the NSDictionary value
+
+ @param key The key value of the dictionary
+ @return NSArray representation of the value
+ */
+- (NSArray *)cm_arrayForKey:(id)key;
+
+/**
  Returns NSDictionary representation of the NSDictionary value
 
  @param key The key value of the dictionary
@@ -50,5 +58,23 @@
  @return object representation of the value
  */
 - (id)cm_objectForKey:(id)key ofClass:(Class)klas;
+
+
+/**
+ Returns object representation of the NSDictionary value
+
+ @param klas Class type of the object
+ @return object representation of the value
+ */
+- (id)cm_objectOfClass:(Class)klas;
+
+/**
+ Returns object array representation of the NSDictionary value
+
+ @param key key The key value of the dictionary
+ @param klas Class type of the objects
+ @return object array representation of the value
+ */
+- (NSArray *)cm_objectArrayForKey:(id)key ofClass:(Class)klas;
 
 @end

@@ -65,6 +65,21 @@ NSString *const kCMNotConformProtocolException = @"Class %@ does not conform to 
     return nil;
 }
 
+- (NSDictionary *)cm_arrayForKey:(id)key
+{
+    if ([self isKeyInValid:key])
+    {
+        return nil;
+    }
+
+    id object = [self objectForKey:key];
+    if ([object isKindOfClass:[NSArray class]])
+    {
+        return object;
+    }
+    return nil;
+}
+
 - (NSDictionary *)cm_dictionaryForKey:(id)key
 {
     if ([self isKeyInValid:key])
@@ -80,21 +95,45 @@ NSString *const kCMNotConformProtocolException = @"Class %@ does not conform to 
     return nil;
 }
 
-- (id)cm_objectForKey:(id)key ofClass:(Class)klas;
+- (id)cm_objectForKey:(id)key ofClass:(Class)klas
 {
-    if (![klas conformsToProtocol:@protocol(CMJSONObjectInitializationProtocol)]) {
+    NSDictionary *dictionary = [self cm_dictionaryForKey:key];
+    if (dictionary)
+    {
+        return [dictionary cm_objectOfClass:klas];
+    }
+    return nil;
+}
+
+- (id)cm_objectOfClass:(Class)klas
+{
+    if (![klas conformsToProtocol:@protocol(CMJSONObjectInitializationProtocol)])
+    {
+        NSString *exception = [self exceptionInitializationStringForKey:@"" ofClass:klas];
+        @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                       reason:exception
+                                     userInfo:nil];
+    }
+    return [[klas alloc] initWithJSONDictionary:self];
+}
+
+- (NSArray *)cm_objectArrayForKey:(id)key ofClass:(Class)klas
+{
+    if (![klas conformsToProtocol:@protocol(CMJSONObjectInitializationProtocol)])
+    {
         NSString *exception = [self exceptionInitializationStringForKey:key ofClass:klas];
         @throw [NSException exceptionWithName:NSInternalInconsistencyException
                                        reason:exception
                                      userInfo:nil];
     }
 
-    NSDictionary *dictionary = [self cm_dictionaryForKey:key];
-    if (dictionary)
+    NSMutableArray *klasObjectArray = [NSMutableArray new];
+    NSArray *dictionaryArray = [self cm_arrayForKey:key];
+    for (NSDictionary *dictionary in dictionaryArray)
     {
-        return [[klas alloc] initWithJSONDictionary:dictionary];
+        [klasObjectArray addObject:[[klas alloc]  initWithJSONDictionary:dictionary]];
     }
-    return nil;
+    return klasObjectArray;
 }
 
 // MARK: - Private Helpers
