@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CAEAFBA01EF53A0500141A4C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFB9F1EF53A0500141A4C /* main.m */; };
 		CAEAFBA31EF53A0500141A4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBA21EF53A0500141A4C /* AppDelegate.m */; };
-		CAEAFBA61EF53A0500141A4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBA51EF53A0500141A4C /* ViewController.m */; };
 		CAEAFBA91EF53A0500141A4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAEAFBA71EF53A0500141A4C /* Main.storyboard */; };
 		CAEAFBAB1EF53A0500141A4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAEAFBAA1EF53A0500141A4C /* Assets.xcassets */; };
 		CAEAFBAE1EF53A0500141A4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAEAFBAC1EF53A0500141A4C /* LaunchScreen.storyboard */; };
@@ -17,8 +16,10 @@
 		CAEAFBCA1EF53DE100141A4C /* CMCity.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBC91EF53DE100141A4C /* CMCity.m */; };
 		CAEAFBCE1EF5407800141A4C /* NSDictionary+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBCD1EF5407800141A4C /* NSDictionary+CMAdditions.m */; };
 		CAEAFBD11EF5432500141A4C /* CMCoordination.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBD01EF5432500141A4C /* CMCoordination.m */; };
+		CAEAFBD61EF54D9400141A4C /* CMCityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBD51EF54D9400141A4C /* CMCityListViewController.m */; };
 		CAEAFBD91EF54E0E00141A4C /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = CAEAFBD81EF54E0E00141A4C /* cities.json */; };
 		CAEAFBDC1EF54EAB00141A4C /* NSJSONSerialization+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBDB1EF54EAB00141A4C /* NSJSONSerialization+CMAdditions.m */; };
+		CAEAFBDF1EF5618100141A4C /* CMCityListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBDE1EF5618100141A4C /* CMCityListViewModel.m */; };
 		CAEAFBE21EF563BA00141A4C /* NSArray+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBE11EF563BA00141A4C /* NSArray+CMAdditions.m */; };
 		CAEAFBE41EF569A800141A4C /* CityListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEAFBE31EF569A800141A4C /* CityListTableCell.xib */; };
 		CAEAFBE71EF56BB500141A4C /* CityListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBE61EF56BB500141A4C /* CityListTableCell.m */; };
@@ -42,8 +43,6 @@
 		CAEAFB9F1EF53A0500141A4C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CAEAFBA11EF53A0500141A4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CAEAFBA21EF53A0500141A4C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CAEAFBA41EF53A0500141A4C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CAEAFBA51EF53A0500141A4C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CAEAFBA81EF53A0500141A4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAEAFBAA1EF53A0500141A4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAEAFBAD1EF53A0500141A4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,9 +57,13 @@
 		CAEAFBCF1EF5432500141A4C /* CMCoordination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCoordination.h; sourceTree = "<group>"; };
 		CAEAFBD01EF5432500141A4C /* CMCoordination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCoordination.m; sourceTree = "<group>"; };
 		CAEAFBD31EF5440300141A4C /* CMJSONObjectInitializationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMJSONObjectInitializationProtocol.h; sourceTree = "<group>"; };
+		CAEAFBD41EF54D9400141A4C /* CMCityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCityListViewController.h; sourceTree = "<group>"; };
+		CAEAFBD51EF54D9400141A4C /* CMCityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCityListViewController.m; sourceTree = "<group>"; };
 		CAEAFBD81EF54E0E00141A4C /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		CAEAFBDA1EF54EAB00141A4C /* NSJSONSerialization+CMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+CMAdditions.h"; sourceTree = "<group>"; };
 		CAEAFBDB1EF54EAB00141A4C /* NSJSONSerialization+CMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+CMAdditions.m"; sourceTree = "<group>"; };
+		CAEAFBDD1EF5618100141A4C /* CMCityListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCityListViewModel.h; sourceTree = "<group>"; };
+		CAEAFBDE1EF5618100141A4C /* CMCityListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCityListViewModel.m; sourceTree = "<group>"; };
 		CAEAFBE01EF563BA00141A4C /* NSArray+CMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CMAdditions.h"; sourceTree = "<group>"; };
 		CAEAFBE11EF563BA00141A4C /* NSArray+CMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CMAdditions.m"; sourceTree = "<group>"; };
 		CAEAFBE31EF569A800141A4C /* CityListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityListTableCell.xib; sourceTree = "<group>"; };
@@ -149,8 +152,8 @@
 		CAEAFBC31EF53A7C00141A4C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CAEAFBA41EF53A0500141A4C /* ViewController.h */,
-				CAEAFBA51EF53A0500141A4C /* ViewController.m */,
+				CAEAFBD41EF54D9400141A4C /* CMCityListViewController.h */,
+				CAEAFBD51EF54D9400141A4C /* CMCityListViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -158,6 +161,8 @@
 		CAEAFBC41EF53C1C00141A4C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CAEAFBDD1EF5618100141A4C /* CMCityListViewModel.h */,
+				CAEAFBDE1EF5618100141A4C /* CMCityListViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -334,11 +339,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAEAFBCE1EF5407800141A4C /* NSDictionary+CMAdditions.m in Sources */,
-				CAEAFBA61EF53A0500141A4C /* ViewController.m in Sources */,
 				CAEAFBEA1EF56CE200141A4C /* UITableView+CMAdditions.m in Sources */,
 				CAEAFBF51EF575E100141A4C /* UIView+CMAdditions.m in Sources */,
 				CAEAFBE71EF56BB500141A4C /* CityListTableCell.m in Sources */,
 				CAEAFBED1EF56D4D00141A4C /* CMTableViewCell.m in Sources */,
+				CAEAFBDF1EF5618100141A4C /* CMCityListViewModel.m in Sources */,
+				CAEAFBD61EF54D9400141A4C /* CMCityListViewController.m in Sources */,
 				CAEAFBA31EF53A0500141A4C /* AppDelegate.m in Sources */,
 				CAEAFBDC1EF54EAB00141A4C /* NSJSONSerialization+CMAdditions.m in Sources */,
 				CAEAFBCA1EF53DE100141A4C /* CMCity.m in Sources */,

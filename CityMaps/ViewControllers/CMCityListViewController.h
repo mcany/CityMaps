@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CMCityListViewController.h
 //  CityMaps
 //
 //  Created by mcan on 17/06/2017.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CMCityListViewController : UIViewController
 
 @end
-
