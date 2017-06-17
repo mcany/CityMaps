@@ -19,7 +19,10 @@
 		CAEAFBD11EF5432500141A4C /* CMCoordination.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBD01EF5432500141A4C /* CMCoordination.m */; };
 		CAEAFBDC1EF54EAB00141A4C /* NSJSONSerialization+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBDB1EF54EAB00141A4C /* NSJSONSerialization+CMAdditions.m */; };
 		CAEAFBE21EF563BA00141A4C /* NSArray+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBE11EF563BA00141A4C /* NSArray+CMAdditions.m */; };
+		CAEAFBE41EF569A800141A4C /* CityListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAEAFBE31EF569A800141A4C /* CityListTableCell.xib */; };
+		CAEAFBE71EF56BB500141A4C /* CityListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBE61EF56BB500141A4C /* CityListTableCell.m */; };
 		CAEAFBEA1EF56CE200141A4C /* UITableView+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBE91EF56CE200141A4C /* UITableView+CMAdditions.m */; };
+		CAEAFBED1EF56D4D00141A4C /* CMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBEC1EF56D4D00141A4C /* CMTableViewCell.m */; };
 		CAEAFBF51EF575E100141A4C /* UIView+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBF41EF575E100141A4C /* UIView+CMAdditions.m */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +61,13 @@
 		CAEAFBDB1EF54EAB00141A4C /* NSJSONSerialization+CMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+CMAdditions.m"; sourceTree = "<group>"; };
 		CAEAFBE01EF563BA00141A4C /* NSArray+CMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CMAdditions.h"; sourceTree = "<group>"; };
 		CAEAFBE11EF563BA00141A4C /* NSArray+CMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CMAdditions.m"; sourceTree = "<group>"; };
+		CAEAFBE31EF569A800141A4C /* CityListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityListTableCell.xib; sourceTree = "<group>"; };
+		CAEAFBE51EF56BB500141A4C /* CityListTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityListTableCell.h; sourceTree = "<group>"; };
+		CAEAFBE61EF56BB500141A4C /* CityListTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityListTableCell.m; sourceTree = "<group>"; };
 		CAEAFBE81EF56CE200141A4C /* UITableView+CMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+CMAdditions.h"; sourceTree = "<group>"; };
 		CAEAFBE91EF56CE200141A4C /* UITableView+CMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CMAdditions.m"; sourceTree = "<group>"; };
+		CAEAFBEB1EF56D4D00141A4C /* CMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMTableViewCell.h; sourceTree = "<group>"; };
+		CAEAFBEC1EF56D4D00141A4C /* CMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMTableViewCell.m; sourceTree = "<group>"; };
 		CAEAFBF31EF575E100141A4C /* UIView+CMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CMAdditions.h"; sourceTree = "<group>"; };
 		CAEAFBF41EF575E100141A4C /* UIView+CMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CMAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,8 +184,13 @@
 			children = (
 				CAEAFBA71EF53A0500141A4C /* Main.storyboard */,
 				CAEAFBAC1EF53A0500141A4C /* LaunchScreen.storyboard */,
+				CAEAFBE31EF569A800141A4C /* CityListTableCell.xib */,
+				CAEAFBE51EF56BB500141A4C /* CityListTableCell.h */,
+				CAEAFBE61EF56BB500141A4C /* CityListTableCell.m */,
+				CAEAFBEB1EF56D4D00141A4C /* CMTableViewCell.h */,
+				CAEAFBEC1EF56D4D00141A4C /* CMTableViewCell.m */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CAEAFBCB1EF5404300141A4C /* Additions */ = {
@@ -288,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAEAFBAE1EF53A0500141A4C /* LaunchScreen.storyboard in Resources */,
+				CAEAFBE41EF569A800141A4C /* CityListTableCell.xib in Resources */,
 				CAEAFBAB1EF53A0500141A4C /* Assets.xcassets in Resources */,
 				CAEAFBA91EF53A0500141A4C /* Main.storyboard in Resources */,
 			);
@@ -311,6 +325,8 @@
 				CAEAFBA61EF53A0500141A4C /* ViewController.m in Sources */,
 				CAEAFBEA1EF56CE200141A4C /* UITableView+CMAdditions.m in Sources */,
 				CAEAFBF51EF575E100141A4C /* UIView+CMAdditions.m in Sources */,
+				CAEAFBE71EF56BB500141A4C /* CityListTableCell.m in Sources */,
+				CAEAFBED1EF56D4D00141A4C /* CMTableViewCell.m in Sources */,
 				CAEAFBA31EF53A0500141A4C /* AppDelegate.m in Sources */,
 				CAEAFBDC1EF54EAB00141A4C /* NSJSONSerialization+CMAdditions.m in Sources */,
 				CAEAFBCA1EF53DE100141A4C /* CMCity.m in Sources */,
@@ -345,7 +361,6 @@
 				CAEAFBA81EF53A0500141A4C /* Base */,
 			);
 			name = Main.storyboard;
-			path = Views;
 			sourceTree = "<group>";
 		};
 		CAEAFBAC1EF53A0500141A4C /* LaunchScreen.storyboard */ = {
@@ -354,7 +369,6 @@
 				CAEAFBAD1EF53A0500141A4C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
