@@ -7,16 +7,21 @@
 //
 
 #import "CMCityListViewController.h"
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 #import "UITableView+CMAdditions.h"
 #import "UIView+CMAdditions.h"
 #import "CMCityListViewModel.h"
 #import "CityListTableCell.h"
+#import "CMCity.h"
+#import "CMCoordination.h"
 
 @interface CMCityListViewController () <UITableViewDelegate, UISearchResultsUpdating>
 
 @property (nonatomic, strong) CMCityListViewModel *viewModel;
-@property (weak, nonatomic) IBOutlet UITableView *cityListTableView;
 @property (nonatomic, strong) UISearchController *searchController;
+
+@property (nonatomic, weak) IBOutlet UITableView *cityListTableView;
 
 @end
 
@@ -29,7 +34,6 @@
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
 
     self.cityListTableView.estimatedRowHeight = 100;
-    self.cityListTableView.estimatedSectionHeaderHeight = 30;
     [self.cityListTableView registerCellWithClass:[CityListTableCell class]];
     self.cityListTableView.dataSource = self.viewModel;
     self.cityListTableView.delegate = self;
@@ -57,6 +61,23 @@
 {
     [self.viewModel filterCityListWithText:searchController.searchBar.text];
     [self.cityListTableView reloadData];
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CMCity *selectedCity = [[self.viewModel cities] objectAtIndex:indexPath.row];
+    [self openMapsWithCoordinate:selectedCity.coordination.coordinate];
+}
+
+#pragma mark - Maps
+
+- (void)openMapsWithCoordinate:(CLLocationCoordinate2D)coordinate
+{
+    MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:coordinate addressDictionary:nil];
+    MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
+    [mapItem openInMapsWithLaunchOptions:nil];
 }
 
 @end

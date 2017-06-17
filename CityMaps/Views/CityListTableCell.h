@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "CMTableViewCell.h"
 
+@class CMCity;
+
 @interface CityListTableCell : CMTableViewCell
 
-@property (nonatomic, weak) IBOutlet UILabel *nameLabel;
+- (void)updateCellwithCity:(CMCity *)city;
 
 @end

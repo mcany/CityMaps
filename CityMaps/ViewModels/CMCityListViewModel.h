@@ -13,11 +13,9 @@
 
 @interface CMCityListViewModel : NSObject <UITableViewDataSource>
 
-@property (nonatomic, copy) NSArray<CMCity *> *cityList;
-@property (nonatomic, copy) NSArray<CMCity *> *filteredCityList;
-
 @property (nonatomic, copy) NSDictionary<NSString *, CMCity *> *cityListDictionary;
 
+- (NSArray<CMCity *> *)cities;
 - (void)fetchCityList;
 - (void)filterCityListWithText:(NSString *)searchText;
 

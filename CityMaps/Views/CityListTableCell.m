@@ -7,12 +7,20 @@
 //
 
 #import "CityListTableCell.h"
+#import "CMCity.h"
 
 @interface CityListTableCell()
 
+@property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 
 @end
 
 @implementation CityListTableCell
+
+- (void)updateCellwithCity:(CMCity *)city
+{
+    NSString *cellString = [NSString stringWithFormat:@"%@, %@", city.name, city.country];
+    self.nameLabel.text = cellString;
+}
 
 @end
