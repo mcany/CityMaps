@@ -10,6 +10,11 @@
 
 @interface UITableView (CMAdditions)
 
+/**
+ Registers self with the given cell class
+
+ @param cellClass Class of the registered cell
+ */
 - (void)registerCellWithClass:(Class)cellClass;
 
 @end

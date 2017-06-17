@@ -10,6 +10,11 @@
 
 @interface CMTableViewCell : UITableViewCell
 
+/**
+ Reuse identifier of the cell
+
+ @return  Reuse identifier of the cell
+ */
 + (NSString *)reuseIdentifier;
 
 @end

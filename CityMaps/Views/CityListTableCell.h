@@ -13,6 +13,11 @@
 
 @interface CityListTableCell : CMTableViewCell
 
+/**
+ The cell updates itself with the given object
+
+ @param city city object that will be used to update labels
+ */
 - (void)updateCellwithCity:(CMCity *)city;
 
 @end

@@ -10,6 +10,11 @@
 
 @interface UIView (CMAdditions)
 
+/**
+ It creates itself from nib file
+
+ @return an insatance of UIView created from nib file
+ */
 + (instancetype)instanceFromNib;
 
 @end
