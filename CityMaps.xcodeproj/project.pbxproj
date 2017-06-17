@@ -17,6 +17,8 @@
 		CAEAFBCE1EF5407800141A4C /* NSDictionary+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBCD1EF5407800141A4C /* NSDictionary+CMAdditions.m */; };
 		CAEAFBDC1EF54EAB00141A4C /* NSJSONSerialization+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBDB1EF54EAB00141A4C /* NSJSONSerialization+CMAdditions.m */; };
 		CAEAFBE21EF563BA00141A4C /* NSArray+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBE11EF563BA00141A4C /* NSArray+CMAdditions.m */; };
+		CAEAFBEA1EF56CE200141A4C /* UITableView+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBE91EF56CE200141A4C /* UITableView+CMAdditions.m */; };
+		CAEAFBF51EF575E100141A4C /* UIView+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBF41EF575E100141A4C /* UIView+CMAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,10 @@
 		CAEAFBDB1EF54EAB00141A4C /* NSJSONSerialization+CMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+CMAdditions.m"; sourceTree = "<group>"; };
 		CAEAFBE01EF563BA00141A4C /* NSArray+CMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CMAdditions.h"; sourceTree = "<group>"; };
 		CAEAFBE11EF563BA00141A4C /* NSArray+CMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CMAdditions.m"; sourceTree = "<group>"; };
+		CAEAFBE81EF56CE200141A4C /* UITableView+CMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+CMAdditions.h"; sourceTree = "<group>"; };
+		CAEAFBE91EF56CE200141A4C /* UITableView+CMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CMAdditions.m"; sourceTree = "<group>"; };
+		CAEAFBF31EF575E100141A4C /* UIView+CMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CMAdditions.h"; sourceTree = "<group>"; };
+		CAEAFBF41EF575E100141A4C /* UIView+CMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CMAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +179,10 @@
 				CAEAFBDB1EF54EAB00141A4C /* NSJSONSerialization+CMAdditions.m */,
 				CAEAFBE01EF563BA00141A4C /* NSArray+CMAdditions.h */,
 				CAEAFBE11EF563BA00141A4C /* NSArray+CMAdditions.m */,
+				CAEAFBE81EF56CE200141A4C /* UITableView+CMAdditions.h */,
+				CAEAFBE91EF56CE200141A4C /* UITableView+CMAdditions.m */,
+				CAEAFBF31EF575E100141A4C /* UIView+CMAdditions.h */,
+				CAEAFBF41EF575E100141A4C /* UIView+CMAdditions.m */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -289,6 +299,8 @@
 			files = (
 				CAEAFBCE1EF5407800141A4C /* NSDictionary+CMAdditions.m in Sources */,
 				CAEAFBA61EF53A0500141A4C /* ViewController.m in Sources */,
+				CAEAFBEA1EF56CE200141A4C /* UITableView+CMAdditions.m in Sources */,
+				CAEAFBF51EF575E100141A4C /* UIView+CMAdditions.m in Sources */,
 				CAEAFBA31EF53A0500141A4C /* AppDelegate.m in Sources */,
 				CAEAFBDC1EF54EAB00141A4C /* NSJSONSerialization+CMAdditions.m in Sources */,
 				CAEAFBE21EF563BA00141A4C /* NSArray+CMAdditions.m in Sources */,

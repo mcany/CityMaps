@@ -24,7 +24,7 @@ NSString *const kCMJSONFileExtensin = @"json";
     return array;
 }
 
-// MARK: - Private Helpers
+#pragma mark - Private Helpers
 
 + (NSString *)filePathOfFileName:(NSString *)fileName
 {

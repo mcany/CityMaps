@@ -136,7 +136,7 @@ NSString *const kCMNotConformProtocolException = @"Class %@ does not conform to 
     return klasObjectArray;
 }
 
-// MARK: - Private Helpers
+#pragma mark - Private Helpers
 
 - (BOOL)isKeyInValid:(id)key
 {
