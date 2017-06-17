@@ -81,14 +81,13 @@
 		CAEAFB9D1EF53A0500141A4C /* CityMaps */ = {
 			isa = PBXGroup;
 			children = (
-				CAEAFBC31EF53A7C00141A4C /* New Group */,
+				CAEAFBC71EF53CD600141A4C /* Views */,
+				CAEAFBC61EF53C6600141A4C /* Resources */,
+				CAEAFBC51EF53C2200141A4C /* Models */,
+				CAEAFBC41EF53C1C00141A4C /* ViewModels */,
+				CAEAFBC31EF53A7C00141A4C /* ViewControllers */,
 				CAEAFBA11EF53A0500141A4C /* AppDelegate.h */,
 				CAEAFBA21EF53A0500141A4C /* AppDelegate.m */,
-				CAEAFBA41EF53A0500141A4C /* ViewController.h */,
-				CAEAFBA51EF53A0500141A4C /* ViewController.m */,
-				CAEAFBA71EF53A0500141A4C /* Main.storyboard */,
-				CAEAFBAA1EF53A0500141A4C /* Assets.xcassets */,
-				CAEAFBAC1EF53A0500141A4C /* LaunchScreen.storyboard */,
 				CAEAFBAF1EF53A0500141A4C /* Info.plist */,
 				CAEAFB9E1EF53A0500141A4C /* Supporting Files */,
 			);
@@ -101,6 +100,7 @@
 				CAEAFB9F1EF53A0500141A4C /* main.m */,
 			);
 			name = "Supporting Files";
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		CAEAFBB71EF53A0500141A4C /* CityMapsTests */ = {
@@ -112,11 +112,44 @@
 			path = CityMapsTests;
 			sourceTree = "<group>";
 		};
-		CAEAFBC31EF53A7C00141A4C /* New Group */ = {
+		CAEAFBC31EF53A7C00141A4C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CAEAFBA41EF53A0500141A4C /* ViewController.h */,
+				CAEAFBA51EF53A0500141A4C /* ViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CAEAFBC41EF53C1C00141A4C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = "New Group";
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CAEAFBC51EF53C2200141A4C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CAEAFBC61EF53C6600141A4C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CAEAFBAA1EF53A0500141A4C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CAEAFBC71EF53CD600141A4C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CAEAFBA71EF53A0500141A4C /* Main.storyboard */,
+				CAEAFBAC1EF53A0500141A4C /* LaunchScreen.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +285,7 @@
 				CAEAFBA81EF53A0500141A4C /* Base */,
 			);
 			name = Main.storyboard;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CAEAFBAC1EF53A0500141A4C /* LaunchScreen.storyboard */ = {
@@ -260,6 +294,7 @@
 				CAEAFBAD1EF53A0500141A4C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
