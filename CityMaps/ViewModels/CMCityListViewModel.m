@@ -25,13 +25,15 @@ NSString *const kCMCitiesFileName = @"cities";
  */
 @property (nonatomic, strong) NSMutableDictionary<NSString *, NSArray *> *savedSearchDictionary;
 
+@property (nonatomic, assign) BOOL isFilterActive;
+
 @end
 
 @implementation CMCityListViewModel
 
 - (NSArray<CMCity *> *)cities
 {
-    if (self.filteredCityList.count > 0)
+    if (self.isFilterActive)
     {
         return self.filteredCityList;
     }
@@ -69,10 +71,12 @@ NSString *const kCMCitiesFileName = @"cities";
 
     if (searchText.length < 1)
     {
+        self.isFilterActive = NO;
         self.filteredCityList = [NSArray new];
         return;
     }
-    
+    self.isFilterActive = YES;
+
     NSArray *savedSearch = [self.savedSearchDictionary valueForKey:searchText];
     if (savedSearch.count > 0)
     {
@@ -128,7 +132,7 @@ NSString *const kCMCitiesFileName = @"cities";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (self.filteredCityList.count > 0)
+    if (self.isFilterActive)
     {
         return [self.filteredCityList count];
     }
@@ -141,7 +145,7 @@ NSString *const kCMCitiesFileName = @"cities";
 
     CMCity *city;
 
-    if (self.filteredCityList.count > 0)
+    if (self.isFilterActive)
     {
         city = [self.filteredCityList objectAtIndex:indexPath.row];
     }
