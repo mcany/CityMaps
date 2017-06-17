@@ -83,10 +83,4 @@ NSString *const kCMCitiesFileName = @"cities";
     return cell;
 }
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//    //return [self.cityListDictionary count];
-//    return 2;
-//}
-
 @end
