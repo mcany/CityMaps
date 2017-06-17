@@ -17,9 +17,13 @@ NSString *const kCMCitiesFileName = @"cities";
 
 @interface CMCityListViewModel()
 
+/**
+ Here I saved the previously searched result in this dictionary.
+ So that the search mechanism will not be triggered when the user deletes its search text.
+ While the user is deleting the text, the saved result will be shown.
+ However everytime the user enters a new key, the search will start with the already filtered array.
+ */
 @property (nonatomic, strong) NSMutableDictionary<NSString *, NSArray *> *savedSearchDictionary;
-@property (nonatomic, copy) NSArray<CMCity *> *cityList;
-@property (nonatomic, copy) NSArray<CMCity *> *filteredCityList;
 
 @end
 
@@ -39,14 +43,12 @@ NSString *const kCMCitiesFileName = @"cities";
 - (void)fetchCityList
 {
     self.savedSearchDictionary = [NSMutableDictionary new];
+    self.filteredCityList = [NSArray new];
 
     NSArray *jsonArray = [NSJSONSerialization cm_jsonArrayWithFileName:kCMCitiesFileName];
     NSArray *unSortedCityList = [jsonArray cm_objectArrayOfClass:[CMCity class]];
 
     self.cityList = [self sortedCityList:unSortedCityList];
-
-    self.cityListDictionary = [NSDictionary dictionaryWithObjects:self.cityList
-                                                          forKeys:[self.cityList valueForKey:@"country"]];
 }
 
 #pragma mark - Private Helpers
@@ -64,6 +66,13 @@ NSString *const kCMCitiesFileName = @"cities";
 - (void)filterCityListWithText:(NSString *)searchText
 {
     [self updateSavedSearchDictionaryWithKey:searchText];
+
+    if (searchText.length < 1)
+    {
+        self.filteredCityList = [NSArray new];
+        return;
+    }
+    
     NSArray *savedSearch = [self.savedSearchDictionary valueForKey:searchText];
     if (savedSearch.count > 0)
     {
@@ -71,16 +80,24 @@ NSString *const kCMCitiesFileName = @"cities";
     }
     else
     {
-        NSArray *filteredSearch = [self.cityList
-                                   filteredArrayUsingPredicate:[NSPredicate
-                                                                predicateWithBlock:^BOOL(CMCity *city, NSDictionary *bindings)
-                                                                {
-                                                                    return [city.name hasPrefix:searchText];
-                                                                }]];
+        NSArray *filteredSearch;
+        if (self.filteredCityList.count > 0)
+        {
+            filteredSearch = [self filterArray:self.filteredCityList withText:searchText];
+        }
+        else
+        {
+            filteredSearch = [self.cityList
+                              filteredArrayUsingPredicate:[NSPredicate
+                                                           predicateWithBlock:^BOOL(CMCity *city, NSDictionary *bindings)
+                                                           {
+                                                               return [city.name hasPrefix:searchText];
+                                                           }]];
+        }
+
         [self.savedSearchDictionary setObject:filteredSearch forKey:searchText];
         self.filteredCityList = filteredSearch;
     }
-    
 }
 
 - (void)updateSavedSearchDictionaryWithKey:(NSString *)newKey
@@ -95,6 +112,16 @@ NSString *const kCMCitiesFileName = @"cities";
         }
     }
     self.savedSearchDictionary = copyDictionary;
+}
+
+- (NSArray *)filterArray:(NSArray *)array withText:(NSString *)text
+{
+    return [array
+            filteredArrayUsingPredicate:[NSPredicate
+                                         predicateWithBlock:^BOOL(CMCity *city, NSDictionary *bindings)
+                                         {
+                                             return [city.name hasPrefix:text];
+                                         }]];
 }
 
 #pragma mark - UITableViewDataSource

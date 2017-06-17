@@ -13,7 +13,8 @@
 
 @interface CMCityListViewModel : NSObject <UITableViewDataSource>
 
-@property (nonatomic, copy) NSDictionary<NSString *, CMCity *> *cityListDictionary;
+@property (nonatomic, copy) NSArray<CMCity *> *cityList;
+@property (nonatomic, copy) NSArray<CMCity *> *filteredCityList;
 
 - (NSArray<CMCity *> *)cities;
 - (void)fetchCityList;

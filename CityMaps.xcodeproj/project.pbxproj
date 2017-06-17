@@ -26,6 +26,8 @@
 		CAEAFBEA1EF56CE200141A4C /* UITableView+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBE91EF56CE200141A4C /* UITableView+CMAdditions.m */; };
 		CAEAFBED1EF56D4D00141A4C /* CMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBEC1EF56D4D00141A4C /* CMTableViewCell.m */; };
 		CAEAFBF51EF575E100141A4C /* UIView+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBF41EF575E100141A4C /* UIView+CMAdditions.m */; };
+		CAEAFBF91EF5AADA00141A4C /* CMCityListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBDE1EF5618100141A4C /* CMCityListViewModel.m */; };
+		CAEAFBFA1EF5AB8300141A4C /* CMCity.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBC91EF53DE100141A4C /* CMCity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -358,7 +360,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAEAFBFA1EF5AB8300141A4C /* CMCity.m in Sources */,
 				CAEAFBB91EF53A0500141A4C /* CityMapsTests.m in Sources */,
+				CAEAFBF91EF5AADA00141A4C /* CMCityListViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

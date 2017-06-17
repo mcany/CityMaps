@@ -32,5 +32,12 @@ NSString *const kCMCoordinationKey = @"coord";
     return self;
 }
 
+- (BOOL)isEqual:(CMCity *)object
+{
+    BOOL isCountrySame = [self.country isEqualToString:object.country];
+    BOOL isNameSame = [self.name isEqualToString:object.name];
+    BOOL isIDSame = self._id == object._id;
+    return isCountrySame && isNameSame && isIDSame;
+}
 
 @end

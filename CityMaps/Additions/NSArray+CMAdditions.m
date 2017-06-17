@@ -21,4 +21,32 @@
     return klasObjectArray;
 }
 
+#pragma mark - Equality
+
+- (BOOL)isEqualToArray:(NSArray *)array {
+    if (!array || [self count] != [array count]) {
+        return NO;
+    }
+
+    for (NSUInteger idx = 0; idx < [array count]; idx++) {
+        if (![self[idx] isEqual:array[idx]]) {
+            return NO;
+        }
+    }
+    
+    return YES;
+}
+
+- (BOOL)isEqual:(id)object {
+    if (self == object) {
+        return YES;
+    }
+
+    if (![object isKindOfClass:[NSArray class]]) {
+        return NO;
+    }
+
+    return [self isEqualToArray:(NSArray *)object];
+}
+
 @end
