@@ -14,6 +14,7 @@
 		CAEAFBAB1EF53A0500141A4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAEAFBAA1EF53A0500141A4C /* Assets.xcassets */; };
 		CAEAFBAE1EF53A0500141A4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAEAFBAC1EF53A0500141A4C /* LaunchScreen.storyboard */; };
 		CAEAFBB91EF53A0500141A4C /* CityMapsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBB81EF53A0500141A4C /* CityMapsTests.m */; };
+		CAEAFBCE1EF5407800141A4C /* NSDictionary+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBCD1EF5407800141A4C /* NSDictionary+CMAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,9 @@
 		CAEAFBB41EF53A0500141A4C /* CityMapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityMapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAEAFBB81EF53A0500141A4C /* CityMapsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityMapsTests.m; sourceTree = "<group>"; };
 		CAEAFBBA1EF53A0500141A4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAEAFBCC1EF5407800141A4C /* NSDictionary+CMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CMAdditions.h"; sourceTree = "<group>"; };
+		CAEAFBCD1EF5407800141A4C /* NSDictionary+CMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CMAdditions.m"; sourceTree = "<group>"; };
+		CAEAFBD31EF5440300141A4C /* CMJSONObjectInitializationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMJSONObjectInitializationProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 		CAEAFB9D1EF53A0500141A4C /* CityMaps */ = {
 			isa = PBXGroup;
 			children = (
+				CAEAFBD21EF543C100141A4C /* Protocols */,
+				CAEAFBCB1EF5404300141A4C /* Additions */,
 				CAEAFBC71EF53CD600141A4C /* Views */,
 				CAEAFBC61EF53C6600141A4C /* Resources */,
 				CAEAFBC51EF53C2200141A4C /* Models */,
@@ -150,6 +156,23 @@
 				CAEAFBAC1EF53A0500141A4C /* LaunchScreen.storyboard */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		CAEAFBCB1EF5404300141A4C /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				CAEAFBCC1EF5407800141A4C /* NSDictionary+CMAdditions.h */,
+				CAEAFBCD1EF5407800141A4C /* NSDictionary+CMAdditions.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		CAEAFBD21EF543C100141A4C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CAEAFBD31EF5440300141A4C /* CMJSONObjectInitializationProtocol.h */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAEAFBCE1EF5407800141A4C /* NSDictionary+CMAdditions.m in Sources */,
 				CAEAFBA61EF53A0500141A4C /* ViewController.m in Sources */,
 				CAEAFBA31EF53A0500141A4C /* AppDelegate.m in Sources */,
 				CAEAFBA01EF53A0500141A4C /* main.m in Sources */,
