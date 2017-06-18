@@ -6,8 +6,8 @@
 //  Copyright © 2017 mertcan. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CMViewController.h"
 
-@interface CMCityListViewController : UIViewController
+@interface CMCityListViewController : CMViewController
 
 @end

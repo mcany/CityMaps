@@ -51,16 +51,29 @@
 
 - (void)fetchListData
 {
-    [self.viewModel fetchCityList];
-    [self.cityListTableView reloadData];
+    [self showLoadingView];
+
+    __weak typeof(self) weakSelf = self;
+    [self.viewModel fetchCityListWithCompletion:^(NSError *error)
+     {
+         [weakSelf.cityListTableView reloadData];
+         [weakSelf hideLoadingView];
+     }];
 }
 
 #pragma mark - UISearchResultsUpdating
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController
 {
-    [self.viewModel filterCityListWithText:searchController.searchBar.text];
-    [self.cityListTableView reloadData];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self.viewModel filterCityListWithText:searchController.searchBar.text];
+        // Here I put throttling to filter the array and did it in another threat
+        // for not to block UI when user writes fast
+        [NSThread sleepForTimeInterval:.1f];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.cityListTableView reloadData];
+        });
+    });
 }
 
 #pragma mark - UITableViewDelegate

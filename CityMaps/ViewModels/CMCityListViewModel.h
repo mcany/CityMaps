@@ -33,7 +33,7 @@
 /**
  Fetches the city list information
  */
-- (void)fetchCityList;
+- (void)fetchCityListWithCompletion:(void (^) (NSError *error))completion;
 
 /**
  Filters the city array with given search text

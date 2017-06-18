@@ -42,6 +42,12 @@ NSString *const kCMCitiesFileName = @"cities";
 
 #pragma mark - Network
 
+- (void)fetchCityListWithCompletion:(void (^) (NSError *error))completion
+{
+    [self fetchCityList];
+    completion(nil);
+}
+
 - (void)fetchCityList
 {
     self.savedSearchDictionary = [NSMutableDictionary new];
@@ -145,11 +151,11 @@ NSString *const kCMCitiesFileName = @"cities";
 
     CMCity *city;
 
-    if (self.isFilterActive)
+    if (self.isFilterActive && self.filteredCityList.count >= indexPath.row)
     {
         city = [self.filteredCityList objectAtIndex:indexPath.row];
     }
-    else
+    else if (!self.isFilterActive && self.cityList.count >= indexPath.row)
     {
         city = [self.cityList objectAtIndex:indexPath.row];
     }

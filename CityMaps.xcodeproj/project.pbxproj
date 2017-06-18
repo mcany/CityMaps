@@ -26,6 +26,7 @@
 		CAEAFBEA1EF56CE200141A4C /* UITableView+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBE91EF56CE200141A4C /* UITableView+CMAdditions.m */; };
 		CAEAFBED1EF56D4D00141A4C /* CMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBEC1EF56D4D00141A4C /* CMTableViewCell.m */; };
 		CAEAFBF51EF575E100141A4C /* UIView+CMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBF41EF575E100141A4C /* UIView+CMAdditions.m */; };
+		CAEAFBF81EF5A28400141A4C /* CMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBF71EF5A28400141A4C /* CMViewController.m */; };
 		CAEAFBF91EF5AADA00141A4C /* CMCityListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBDE1EF5618100141A4C /* CMCityListViewModel.m */; };
 		CAEAFBFA1EF5AB8300141A4C /* CMCity.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEAFBC91EF53DE100141A4C /* CMCity.m */; };
 /* End PBXBuildFile section */
@@ -77,6 +78,8 @@
 		CAEAFBEC1EF56D4D00141A4C /* CMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMTableViewCell.m; sourceTree = "<group>"; };
 		CAEAFBF31EF575E100141A4C /* UIView+CMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CMAdditions.h"; sourceTree = "<group>"; };
 		CAEAFBF41EF575E100141A4C /* UIView+CMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CMAdditions.m"; sourceTree = "<group>"; };
+		CAEAFBF61EF5A28400141A4C /* CMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMViewController.h; sourceTree = "<group>"; };
+		CAEAFBF71EF5A28400141A4C /* CMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,8 @@
 			children = (
 				CAEAFBD41EF54D9400141A4C /* CMCityListViewController.h */,
 				CAEAFBD51EF54D9400141A4C /* CMCityListViewController.m */,
+				CAEAFBF61EF5A28400141A4C /* CMViewController.h */,
+				CAEAFBF71EF5A28400141A4C /* CMViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -345,6 +350,7 @@
 				CAEAFBF51EF575E100141A4C /* UIView+CMAdditions.m in Sources */,
 				CAEAFBE71EF56BB500141A4C /* CityListTableCell.m in Sources */,
 				CAEAFBED1EF56D4D00141A4C /* CMTableViewCell.m in Sources */,
+				CAEAFBF81EF5A28400141A4C /* CMViewController.m in Sources */,
 				CAEAFBDF1EF5618100141A4C /* CMCityListViewModel.m in Sources */,
 				CAEAFBD61EF54D9400141A4C /* CMCityListViewController.m in Sources */,
 				CAEAFBA31EF53A0500141A4C /* AppDelegate.m in Sources */,
